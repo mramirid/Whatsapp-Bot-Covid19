@@ -1,6 +1,6 @@
-import type { CountryStats } from './country-stats.interface';
+import type CountryStats from './country-stats.interface';
 
-export const dummyCountryStats: CountryStats = {
+const dummyCountryStats: CountryStats = {
   cases: 131_524_885,
   todayCases: 45_442_552,
   deaths: 3_352_999,
@@ -11,3 +11,5 @@ export const dummyCountryStats: CountryStats = {
   critical: 2,
   updatedAt: new Date('2023-05-14T01:24:30.408Z'),
 };
+
+export default dummyCountryStats;

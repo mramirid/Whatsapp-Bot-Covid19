@@ -1,10 +1,11 @@
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Test } from '@nestjs/testing';
 import { firstValueFrom } from 'rxjs';
-import { AppService } from './app.service';
-import { dummyCountryStats } from './country/country-stats.dummy';
-import { CountryService } from './country/country.service';
-import { UpstreamAPI } from './upstream-api/upstream-api.abstract';
+
+import AppService from './app.service';
+import dummyCountryStats from './country/country-stats.dummy';
+import CountryService from './country/country.service';
+import UpstreamAPI from './upstream-api/upstream-api.abstract';
 
 let service: AppService;
 

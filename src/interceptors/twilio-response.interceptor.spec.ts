@@ -1,7 +1,8 @@
 import type { CallHandler } from '@nestjs/common';
 import { of } from 'rxjs';
 import { twiml } from 'twilio';
-import { TwilioResponseInterceptor } from './twilio-response.interceptor';
+
+import TwilioResponseInterceptor from './twilio-response.interceptor';
 
 describe('intercept()', () => {
   const message = 'Hello World';

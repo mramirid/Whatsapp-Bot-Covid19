@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { CountryService } from './country/country.service';
+
+import CountryService from './country/country.service';
 
 @Injectable()
-export class AppService {
+export default class AppService {
   constructor(private readonly countryService: CountryService) {}
 
   replyHello(senderName: string) {

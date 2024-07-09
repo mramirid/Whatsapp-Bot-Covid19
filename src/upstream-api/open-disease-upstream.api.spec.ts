@@ -1,6 +1,7 @@
 import type { HttpService } from '@nestjs/axios';
 import { firstValueFrom, of } from 'rxjs';
-import { OpenDiseaseUpstreamAPI } from './open-disease-upstream.api';
+
+import OpenDiseaseUpstreamAPI from './open-disease-upstream.api';
 
 const httpServiceGetMock = jest.fn();
 let upstreamAPI: OpenDiseaseUpstreamAPI;

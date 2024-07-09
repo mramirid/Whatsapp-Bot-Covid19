@@ -2,11 +2,12 @@ import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Inject, Injectable } from '@nestjs/common';
 import type { Cache } from 'cache-manager';
 import { from, map, mergeMap, of, retry, tap } from 'rxjs';
-import type { CountryStats } from './country-stats.interface';
-import { UpstreamAPI } from '../upstream-api/upstream-api.abstract';
+
+import UpstreamAPI from '../upstream-api/upstream-api.abstract';
+import type CountryStats from './country-stats.interface';
 
 @Injectable()
-export class CountryService {
+export default class CountryService {
   private readonly STATS_CACHE_KEY = 'COUNTRY_STATS_CACHE';
 
   constructor(

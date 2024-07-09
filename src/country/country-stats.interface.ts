@@ -1,4 +1,4 @@
-export interface CountryStats {
+export default interface CountryStats {
   cases: number;
   todayCases: number;
   deaths: number;

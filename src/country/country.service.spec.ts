@@ -1,13 +1,20 @@
-import { CacheModule, CACHE_MANAGER } from '@nestjs/cache-manager';
+import { CACHE_MANAGER, CacheModule } from '@nestjs/cache-manager';
 import { Test } from '@nestjs/testing';
 import type { Cache } from 'cache-manager';
 import { clone } from 'lodash';
-import { catchError, delay, of, switchMap, throwError } from 'rxjs';
-import { firstValueFrom } from 'rxjs/internal/firstValueFrom';
-import { UpstreamAPI } from '../upstream-api/upstream-api.abstract';
-import { dummyCountryStats } from './country-stats.dummy';
-import type { CountryStats } from './country-stats.interface';
-import { CountryService } from './country.service';
+import {
+  catchError,
+  delay,
+  firstValueFrom,
+  of,
+  switchMap,
+  throwError,
+} from 'rxjs';
+
+import UpstreamAPI from '../upstream-api/upstream-api.abstract';
+import dummyCountryStats from './country-stats.dummy';
+import type CountryStats from './country-stats.interface';
+import CountryService from './country.service';
 
 describe('Unit Testing', () => {
   const getCacheMock = jest.fn();

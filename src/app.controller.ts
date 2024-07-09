@@ -7,11 +7,12 @@ import {
   Post,
   UseInterceptors,
 } from '@nestjs/common';
-import { AppService } from './app.service';
-import { TwilioResponseInterceptor } from './interceptors/twilio-response.interceptor';
+
+import AppService from './app.service';
+import TwilioResponseInterceptor from './interceptors/twilio-response.interceptor';
 
 @Controller()
-export class AppController {
+export default class AppController {
   private readonly logger = new Logger(AppController.name);
 
   constructor(private readonly appService: AppService) {}

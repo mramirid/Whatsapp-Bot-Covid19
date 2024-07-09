@@ -1,11 +1,12 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { map } from 'rxjs';
-import type { OpenDiseaseCountryStats } from './open-disease-country-stats.interface';
-import { UpstreamAPI } from './upstream-api.abstract';
+
+import type OpenDiseaseCountryStats from './open-disease-country-stats.interface';
+import UpstreamAPI from './upstream-api.abstract';
 
 @Injectable()
-export class OpenDiseaseUpstreamAPI extends UpstreamAPI {
+export default class OpenDiseaseUpstreamAPI extends UpstreamAPI {
   constructor(private readonly httpService: HttpService) {
     super();
   }

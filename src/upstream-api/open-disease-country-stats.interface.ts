@@ -1,4 +1,4 @@
-export interface OpenDiseaseCountryStats {
+export default interface OpenDiseaseCountryStats {
   updated: number;
   country: string;
   countryInfo: {
