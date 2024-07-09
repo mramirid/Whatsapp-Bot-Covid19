@@ -2,11 +2,12 @@ import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import type { INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
-import { AppController } from '../src/app.controller';
-import { AppService } from '../src/app.service';
-import { dummyCountryStats } from '../src/country/country-stats.dummy';
-import { CountryService } from '../src/country/country.service';
-import { UpstreamAPI } from '../src/upstream-api/upstream-api.abstract';
+
+import AppController from '../src/app.controller';
+import AppService from '../src/app.service';
+import dummyCountryStats from '../src/country/country-stats.dummy';
+import CountryService from '../src/country/country.service';
+import UpstreamAPI from '../src/upstream-api/upstream-api.abstract';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
